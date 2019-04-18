@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<configuration>
+    <!--配置环境-->
+    <environments default="mysql">
+        <environment id="mysql">
+            <!--配置事物类型-->
+            <transactionManager type="JDBC"></transactionManager>
+            <!--配置数据源-->
+            <dataSource type="POOLED">
+                <property name="driver" value="com.mysql.jdbc.Driver"/>
+                <property name="url" value="jdbc:mysql://localhost:3306/mybatis"/>
+                <property name="username" value="root"/>
+                <property name="password" value="root"/>
+            </dataSource>
+        </environment>
+    </environments>
+
+    <!--指定映射文件位置，每个dao有独立的配置文件-->
+    <!--<mappers>-->
+        <!--<mapper resource="com/tcl/dao/IUserMapper.xml"/>-->
+    <!--</mappers>-->
+
+    <!--使用注解-->
+    <mappers>
+    <mapper class="com.tcl.dao.IUserDao"/>
+    </mappers>
+</configuration>

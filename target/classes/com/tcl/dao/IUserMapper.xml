@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<mapper namespace="com.tcl.dao.IUserDao">
+
+    <!--配置所有查询,指明封装类型：resultType-->
+    <select id="findAll" resultType="com.tcl.domain.User">
+        select * from user
+    </select>
+</mapper>
